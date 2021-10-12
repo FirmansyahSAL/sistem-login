@@ -7,9 +7,10 @@
         <div class="card-body login-card-body">
             <p class="login-box-msg">Sign in to start your session</p>
             <?= $this->session->flashdata('message') ?>
-            <form action="user">
+            <form action="user" method="post" action="<?= base_url('auth'); ?>">
                 <div class="input-group mb-3">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Email" value="<?= set_value('email'); ?>">
+                    <?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
@@ -18,6 +19,7 @@
                 </div>
                 <div class="input-group mb-3">
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-lock"></span>
