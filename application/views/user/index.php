@@ -79,6 +79,8 @@
                                 </p>
                             </a>
                         </li>
+
+                        <li class="nav-header">Profile</li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
                                 <i class="fas fa-user-md"></i>
@@ -87,6 +89,12 @@
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
+                        <li class="nav-item">
+                            <a href="<?= base_url('auth/logout'); ?>" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p>Log out</p>
+                            </a>
+                        </li>
                         </li>
                     </ul>
                 </nav>
